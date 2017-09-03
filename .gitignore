@@ -1,0 +1,5 @@
+# Unnessecary Eclipse Metadata
+.settings/
+bin/
+.CLASSPATH
+.PROJECT
