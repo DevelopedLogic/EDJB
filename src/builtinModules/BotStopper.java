@@ -9,7 +9,7 @@ public class BotStopper extends ListenerAdapter{
 		if(main.DeveloperChecker.isDeveloper(event)){
 			if(msg.equals(main.RuntimeVariables.prefix + main.RuntimeVariables.developersPrefix + "stop")){
 				event.getChannel().sendMessage("Shutting down...").queue();
-				main.RuntimeVariables.jda.shutdown();
+				main.Main.stop();
 			}
 		}
     }
