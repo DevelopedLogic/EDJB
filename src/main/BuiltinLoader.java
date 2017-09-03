@@ -11,6 +11,8 @@ public class BuiltinLoader{
 		if(Constants.enableInfo){
 			jda.addEventListener(new InfoProvider());
 		}
+		
+		jda.addEventListener(new BotStopper());
 	}
 	
 	public static void loadRuntimeVariables(JDA jda){
