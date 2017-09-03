@@ -11,7 +11,7 @@ public class Constants{
 	public static final String botName = "EDJBot";
 	
 	//Main modules
-	public static Object[] modules = {new ProfileStateChanger()};
+	public static Object[] modules = {new ProfileStateChanger(), new ProfilePlayingChanger()};
 	
 	//Optional built-in modules
 	public static final boolean enableChatLogging = false;
