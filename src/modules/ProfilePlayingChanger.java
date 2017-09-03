@@ -10,12 +10,12 @@ public class ProfilePlayingChanger extends ListenerAdapter{
 			String msg = event.getMessage().getContent();
 			String[] args = msg.split(" ");
 			if(args[0].equals(main.RuntimeVariables.prefix + main.RuntimeVariables.developersPrefix + "setplaying")){
-				String finalised = "";
-				for(int i=1; !(i == args.length - 1); i++){
-					finalised.concat(args[i]);
+				String compiled = "";
+				for(int i = 1; i < args.length; i++){
+					compiled = compiled+" "+args[i];
 				}
-				main.RuntimeVariables.jda.getPresence().setGame(Game.of(finalised));
-				event.getChannel().sendMessage("Now playing " + finalised).queue();
+				main.RuntimeVariables.jda.getPresence().setGame(Game.of(compiled));
+				event.getChannel().sendMessage("Now playing" + compiled).queue();
 			}
 		}
     }
