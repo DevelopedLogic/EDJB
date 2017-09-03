@@ -12,4 +12,10 @@ public class BuiltinLoader{
 			jda.addEventListener(new InfoProvider());
 		}
 	}
+	
+	public static void loadRuntimeVariables(JDA jda){
+		RuntimeVariables.jda = jda;
+		RuntimeVariables.prefix = Constants.prefix;
+		RuntimeVariables.developersPrefix = Constants.developersPrefix;
+	}
 }

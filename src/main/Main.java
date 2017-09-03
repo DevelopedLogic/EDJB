@@ -12,5 +12,10 @@ public class Main{
     public static void main(String[] args) throws LoginException, RateLimitedException, InterruptedException{
         JDA jda = new JDABuilder(AccountType.BOT).setToken(Constants.token).buildBlocking();
         BuiltinLoader.loadBuiltins(jda);
+        BuiltinLoader.loadRuntimeVariables(jda);
+        
+        for(Object module:Constants.modules){
+            jda.addEventListener(module);
+        }
     }
 }
